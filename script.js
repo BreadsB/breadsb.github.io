@@ -53,7 +53,7 @@ $(document).ready(function() {
       data: JSON.stringify({
         id: taskId,
         title: taskTitle,
-        content: taskContent
+        description: taskContent
       }),
       success: function(data) {
         parentEl.attr('data-task-id', data.id).toggleClass('datatable__row--editing');
@@ -93,7 +93,7 @@ $(document).ready(function() {
       dataType: 'json',
       data: JSON.stringify({
         title: taskTitle,
-        content: taskContent
+        description: taskContent
       }),
       complete: function(data) {
         if(data.status === 200) {
